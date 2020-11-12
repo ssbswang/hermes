@@ -1,5 +1,3 @@
-!<img src="https://github.com/ssbswang/hermes/blob/master/img/hermes1.png" width="500px" height="auto" >
-
 ## What it is
 Hermes is backend server implemented using Spring framework. It focuses
 on resolving the problem of handling incoming requests by channeling the traffic
