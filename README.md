@@ -1,9 +1,10 @@
 ## What it is
 Hermes is backend server implemented using Spring framework. It focuses
 on resolving the problem of handling incoming requests by channeling the traffic
-into different queues via ActiveMQ Artemis, which then can be diverted.
+into different queues via ActiveMQ Artemis, which then can be diverted depending
+oon your needs and customizations.
 
-In addition, I've added metrics monitoring the the server activity using Grafana,
+In addition, I've also added metrics monitoring the the server activity using Grafana,
 by having Prometheus to scrape the data exposed via Spring actuator.
 
 ## Running core application 
