@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  hermes:
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+  prometheus:
+    image: prom/prometheus:v2.21.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - "./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+  grafana:
+    image: grafana/grafana:7.2.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./grafana/provisioning/datasources/datasources.yaml:/etc/grafana/provisioning/datasources/datasources.yaml"
+      - "./grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards"
+
+networks:
+  default:
+    driver: bridge
+    name: hermes-network
